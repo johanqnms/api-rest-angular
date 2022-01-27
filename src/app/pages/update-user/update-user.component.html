@@ -1,0 +1,48 @@
+<app-header></app-header>
+<p>update-user works!</p>
+
+<main class="update-user-container">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="input-document" class="form-label">Document</label>
+      <input
+        type="number"
+        class="form-control"
+        id="document"
+        name="number"
+        [(ngModel)]="user.document"
+      />
+    </div>
+    <div>
+      <label for="input-name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="user.name"
+      />
+    </div>
+    <div>
+      <label for="input-email" class="form-label">email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        [(ngModel)]="user.email"
+      />
+    </div>
+    <div>
+      <label for="input-gender" class="form-label">Gender</label>
+      <select class="form-select" name="gender" [(ngModel)]="user.gender">
+        <option selected>Seleccione el género</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+    </div>
+    <div class="submit-button">
+      <button type="submit" class="btn btn-primary">Update User</button>
+    </div>
+  </form>
+</main>
