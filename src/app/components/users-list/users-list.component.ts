@@ -22,7 +22,14 @@ export class UsersListComponent implements OnInit {
     });
   }
 
-  updateUser() {
-    ///this.router.navigate();
+  deleteUser(id: number) {
+    console.log('Click en eliminar Usuario' + id);
+    this._userService.deleteUser(id).subscribe({
+      complete: () => {
+        console.log('User deleted');
+        this.getUsers();
+      },
+      error: () => console.error(),
+    });
   }
 }

@@ -28,9 +28,7 @@
             >Edit</a
           >
           |
-          <a class="actions-link" routerLink="/delete-user/{{ user.id_user }}"
-            >Delete</a
-          >
+          <a class="actions-link" (click)="deleteUser(user.id_user)">Delete</a>
         </td>
       </tr>
     </table>
