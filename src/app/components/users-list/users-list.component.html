@@ -18,9 +18,15 @@
         </tr>
       </thead>
       <tr *ngFor="let user of users">
-        <td>{{ user.id_user }}</td>
+        <td>
+          {{ user.id_user }}
+        </td>
         <td>{{ user.document }}</td>
-        <td>{{ user.name }}</td>
+        <td>
+          <a class="actions-link" routerLink="/view/{{ user.id_user }}">{{
+            user.name
+          }}</a>
+        </td>
         <td>{{ user.email }}</td>
         <td>{{ user.gender }}</td>
         <td>

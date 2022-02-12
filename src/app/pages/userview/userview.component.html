@@ -1,0 +1,56 @@
+<app-header></app-header>
+<main class="view-user-container">
+  <div>
+    <button type="text" class="back btn btn-dark">
+      <a routerLink="/users-list"> Regresar</a>
+    </button>
+  </div>
+  <form>
+    <div>
+      <label for="input-document" class="form-label">Document</label>
+      <input
+        type="number"
+        class="form-control"
+        id="document"
+        name="number"
+        [(ngModel)]="user.document"
+        disabled
+      />
+    </div>
+    <div>
+      <label for="input-name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="user.name"
+        disabled
+      />
+    </div>
+    <div>
+      <label for="input-email" class="form-label">email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        [(ngModel)]="user.email"
+        disabled
+      />
+    </div>
+    <div>
+      <label for="input-gender" class="form-label">Gender</label>
+      <select
+        class="form-select"
+        name="gender"
+        [(ngModel)]="user.gender"
+        disabled
+      >
+        <option selected>Seleccione el género</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+    </div>
+  </form>
+</main>

@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
+import { LoginComponent } from './pages/login/login.component';
+import { UserviewComponent } from './pages/userview/userview.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { UpdateUserComponent } from './pages/update-user/update-user.component';
     HeaderComponent,
     CreateUserComponent,
     UpdateUserComponent,
+    LoginComponent,
+    UserviewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
